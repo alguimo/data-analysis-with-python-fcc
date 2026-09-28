@@ -8,13 +8,13 @@ propios tests de freeCodeCamp (`test_module.py`).
 
 ## Proyectos
 
-| Proyecto | Descripcion | Dependencias | Repositorio original |
-| --- | --- | --- | --- |
-| [Demographic-Data-Analyzer](Demographic-Data-Analyzer/) | Analisis del censo de adultos: distribucion por raza, edad media, porcentaje de-education, pais con mas ingresos | pandas | [alguimo/Demographic-Data-Analyzer](https://github.com/alguimo/Demographic-Data-Analyzer) |
-| [medical-data-visualizer](medical-data-visualizer/) | Visualizaciones de datos medicos: masa corporal, colesterol, glucosa y correlaciones | pandas, seaborn | [alguimo/medical-data-visualizer](https://github.com/alguimo/medical-data-visualizer) |
-| [Page-View-Time-Series-Visualizer](Page-View-Time-Series-Visualizer/) | Series temporales de visitas al foro de freeCodeCamp, con limpieza de outliers y dos box plots | pandas, seaborn, matplotlib | [alguimo/Page-View-Time-Series-Visualizer](https://github.com/alguimo/Page-View-Time-Series-Visualizer) |
-| [sea-level-predictor](sea-level-predictor/) | Prediccion del nivel del mar con regresion lineal sobre datos de la EPA | pandas, numpy, scipy, matplotlib | [alguimo/sea-level-predictor](https://github.com/alguimo/sea-level-predictor) |
-| [Mean-Variance-Standard-Deviation-Calculator](Mean-Variance-Standard-Deviation-Calculator/) | Calculo de media, varianza y desviacion estandar de una lista de numeros | numpy | [alguimo/Mean-Variance-Standard-Deviation-Calculator](https://github.com/alguimo/Mean-Variance-Standard-Deviation-Calculator) |
+| Proyecto | Descripcion | Dependencias |
+| --- | --- | --- |
+| [Demographic-Data-Analyzer](Demographic-Data-Analyzer/) | Analisis del censo de adultos: distribucion por raza, edad media, porcentaje de-education, pais con mas ingresos | pandas |
+| [medical-data-visualizer](medical-data-visualizer/) | Visualizaciones de datos medicos: masa corporal, colesterol, glucosa y correlaciones | pandas, seaborn |
+| [Page-View-Time-Series-Visualizer](Page-View-Time-Series-Visualizer/) | Series temporales de visitas al foro de freeCodeCamp, con limpieza de outliers y dos box plots | pandas, seaborn, matplotlib |
+| [sea-level-predictor](sea-level-predictor/) | Prediccion del nivel del mar con regresion lineal sobre datos de la EPA | pandas, numpy, scipy, matplotlib |
+| [Mean-Variance-Standard-Deviation-Calculator](Mean-Variance-Standard-Deviation-Calculator/) | Calculo de media, varianza y desviacion estandar de una lista de numeros | numpy |
 
 ## Estado de los tests
 
