@@ -1,42 +1,26 @@
 # Data Analysis with Python
 
-Soluciones de los proyectos del curso [Data Analysis with Python](https://www.freecodecamp.org/learn/data-analysis-with-python)
-de freeCodeCamp, agrupados en un único repositorio.
+Trabajo completado del curso [Data Analysis with Python](https://www.freecodecamp.org/learn/data-analysis-with-python)
+de freeCodeCamp, con los cinco proyectos agrupados en un unico repositorio.
 
 Cada proyecto es una carpeta independiente con su propio `requirements.txt` y sus
-propios tests de freeCodeCamp (`test_module.py`).
+propios tests del curso (`test_module.py`).
+
+**Stack:** pandas, numpy, scipy, matplotlib, seaborn.
 
 ## Proyectos
 
-| Proyecto | Descripcion | Dependencias |
-| --- | --- | --- |
-| [Demographic-Data-Analyzer](Demographic-Data-Analyzer/) | Analisis del censo de adultos: distribucion por raza, edad media, porcentaje de-education, pais con mas ingresos | pandas |
-| [medical-data-visualizer](medical-data-visualizer/) | Visualizaciones de datos medicos: masa corporal, colesterol, glucosa y correlaciones | pandas, seaborn |
-| [Page-View-Time-Series-Visualizer](Page-View-Time-Series-Visualizer/) | Series temporales de visitas al foro de freeCodeCamp, con limpieza de outliers y dos box plots | pandas, seaborn, matplotlib |
-| [sea-level-predictor](sea-level-predictor/) | Prediccion del nivel del mar con regresion lineal sobre datos de la EPA | pandas, numpy, scipy, matplotlib |
-| [Mean-Variance-Standard-Deviation-Calculator](Mean-Variance-Standard-Deviation-Calculator/) | Calculo de media, varianza y desviacion estandar de una lista de numeros | numpy |
-
-## Estado de los tests
-
-Resultado de `python -m unittest test_module.py` en cada proyecto, verificado contra
-Python 3.9 con `pandas==1.5.3`, `numpy==1.24.4`, `scipy==1.10.1`, `seaborn==0.13.2`:
-
-| Proyecto | Resultado | Detalle |
-| --- | --- | --- |
-| Demographic-Data-Analyzer | 10/10 | pasa |
-| sea-level-predictor | 4/4 | pasa |
-| Mean-Variance-Standard-Deviation-Calculator | 3/3 | pasa |
-| Page-View-Time-Series-Visualizer | 10/11 | falla `test_box_plot_2_labels`: el box plot 2 no expone las etiquetas de los meses |
-| medical-data-visualizer | 1/4 | 2 errores: el test espera un `Axes` y el modulo devuelve un `ndarray`. 1 fallo: el heat map imprime `-0.0` en vez de `0.0` |
-
-Los dos ultimos fallan igual en los repositorios individuales de origen, asi que son
-pendientes preexistentes y no reelaciones de este repositorio. El heat map de
-medical-data-visualizer es el caso tipico de un problema de version: las versiones
-modernas de matplotlib formatean el cero con signo.
+| Proyecto | Que demuestra |
+| --- | --- |
+| [Demographic-Data-Analyzer](Demographic-Data-Analyzer/) | Analisis exploratorio sobre 32.563 registros del censo: distribucion categorica, filtros booleanos combinados, agregacion por grupo y maximo de un cociente entre dos `groupby` |
+| [medical-data-visualizer](medical-data-visualizer/) | Feature engineering sobre 70.001 examenes: derivar el IMC, recodificar categoricas, reshape wide-to-long con `melt`, y matriz de correlacion con mascara triangular |
+| [Page-View-Time-Series-Visualizer](Page-View-Time-Series-Visualizer/) | Series temporales: parseo de fechas como indice, filtrado de outliers por cuartiles, agregacion mensual con `groupby().unstack()` y comparacion de distribuciones con box plots |
+| [sea-level-predictor](sea-level-predictor/) | Regresion lineal con `scipy.stats.linregress` y proyeccion de la tendencia hasta 2050, con una segunda regresion sobre el subconjunto posterior a 2000 para comparar pendientes |
+| [Mean-Variance-Standard-Deviation-Calculator](Mean-Variance-Standard-Deviation-Calculator/) | Calculo estadistico con numpy y agregacion consciente del eje sobre una matriz 3x3, con validacion de entrada y tipos nativos en la salida |
 
 ## Uso
 
-Cada proyecto se ejecuta de forma independiente, desde dentro de su carpeta:
+Cada proyecto se ejecuta por separado, desde dentro de su carpeta:
 
 ```bash
 cd sea-level-predictor
@@ -46,12 +30,16 @@ python main.py
 python -m unittest test_module.py
 ```
 
-Los dos CSV grandes que usan los tests se versionan en este repositorio
-(`adult.data.csv`, `medical_examination.csv`) para que se puedan ejecutar sin
-descargar nada.
+Los `requirements.txt` fijan las versiones de dependencias que usaba el curso en su
+momento, algunas de 2020. En Python actuales pueden pedir `pip install --upgrade` o una
+version mas nueva de numpy, pandas o seaborn.
 
 ## Nota sobre los datos
 
-`adult.data.csv` (3.5 MB) y `medical_examination.csv` (2.9 MB) provienen del
-repositorio del curso de freeCodeCamp. Se incluyen aqui para que los tests sean
-reproducibles offline.
+Los CSV que usan los tests vienen del repositorio del curso y se versionan aqui para
+que todo sea reproducible sin descargar nada:
+
+- `adult.data.csv` (3.5 MB, 32.563 registros)
+- `medical_examination.csv` (2.9 MB, 70.001 registros)
+- `fcc-forum-pageviews.csv` (22 KB, 1.305 registros)
+- `epa-sea-level.csv` (5.9 KB, 134 registros)
