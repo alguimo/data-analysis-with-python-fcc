@@ -25,11 +25,11 @@ Python 3.9 con `pandas==1.5.3`, `numpy==1.24.4`, `scipy==1.10.1`, `seaborn==0.13
 | --- | --- | --- |
 | Demographic-Data-Analyzer | 10/10 | pasa |
 | sea-level-predictor | 4/4 | pasa |
+| Mean-Variance-Standard-Deviation-Calculator | 3/3 | pasa |
 | Page-View-Time-Series-Visualizer | 10/11 | falla `test_box_plot_2_labels`: el box plot 2 no expone las etiquetas de los meses |
 | medical-data-visualizer | 1/4 | 2 errores: el test espera un `Axes` y el modulo devuelve un `ndarray`. 1 fallo: el heat map imprime `-0.0` en vez de `0.0` |
-| Mean-Variance-Standard-Deviation-Calculator | 0/3 | **sin resolver**: `mean_var_std.py` conserva el boilerplate de freeCodeCamp y `calculate` no esta implementada (`NameError: name 'calculations' is not defined`) |
 
-Los tres ultimos fallan igual en los repositorios individuales de origen, asi que son
+Los dos ultimos fallan igual en los repositorios individuales de origen, asi que son
 pendientes preexistentes y no reelaciones de este repositorio. El heat map de
 medical-data-visualizer es el caso tipico de un problema de version: las versiones
 modernas de matplotlib formatean el cero con signo.
